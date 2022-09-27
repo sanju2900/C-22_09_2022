@@ -1,0 +1,526 @@
+//Write a C# Sharp program that takes three letters as input and display them in reverse order.
+
+
+using System;
+
+public class HelloWorld
+{    public static void Main(string[] args)  
+  {        int n=3;        //string str;      
+ 	 Console.Write("Enter a Letter1: ");       
+ 	string str = Console.ReadLine();       
+  	Console.Write("Enter a Letter2: ");        
+	string str1 = Console.ReadLine();        
+	 Console.Write("Enter a Letter3: ");
+        string str2 = Console.ReadLine();
+
+              Console.Write("Result {0} ",str2+" "+str1+" "+str); 
+   }
+}
+
+//Write a C# Sharp program that takes the radius of a circle as input and calculate the perimeter
+ and area of the circle.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter Radius of circle: ");
+            double radius = Convert.ToDouble(Console.ReadLine());
+            double perimeter, area;
+            perimeter = Math.PI*2 * radius;
+            area = Math.PI * (radius * radius);
+            Console.WriteLine("Perimeter: "+ perimeter);
+            Console.WriteLine("Area: "+ area);
+
+            Console.ReadKey();
+        }
+    }
+}
+
+//Write a C# Sharp program that takes distance and time as input and displays the speed 
+in kilometres per hour and miles per hour.
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter Distance in KM: ");
+            double distance = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter Time in hr: ");
+            double time = Convert.ToDouble(Console.ReadLine());
+            double speed;
+           
+            speed= distance/time;
+            Console.WriteLine("Speed in KM: "+ speed+"km/hr");
+
+            Console.WriteLine("Speed in M: " + speed*1000 + "m/hr");
+            Console.ReadKey();
+        }
+    }
+}
+
+//Write a C# Sharp program that takes two numbers as input and returns true or false
+ when both numbers are even or odd.
+
+namespace Interface
+{
+ 
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+          Console.WriteLine("Enter number1: ");
+          int num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter number 2: ");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            if (num1 % 2 == 0 && num2 % 2 == 0)
+            {
+                Console.WriteLine("Both are even ");
+                
+            }
+          
+            else
+            {
+                Console.WriteLine("Both are neither even nor odd ");
+
+            }
+
+        }
+    }
+}
+
+//Write a C# Sharp program to find whether a given year is a leap year or not.
+
+namespace Interface
+{
+ 
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+          Console.Write("Enter Year : ");
+          int year = Convert.ToInt32(Console.ReadLine());
+
+            
+
+            if (year % 400 ==0)
+            {
+                Console.WriteLine(year +" is Leap year ");
+                
+            }
+           else if (year % 100 == 0)
+            {
+                Console.WriteLine(year + " is Leap year ");
+
+            }
+            else if (year % 4 == 0)
+            {
+                Console.WriteLine(year + " is Leap year ");
+
+            }
+            else
+            {
+                Console.WriteLine(year + " is not a Leap year ");
+
+            }
+
+        }
+    }
+}
+
+//Write a C# Sharp program to accept the height of a person in centimeter 
+and categorize the person according to their height.
+ (Below 135 - short, above 180, tall. In between average)
+
+namespace Interface
+{
+ 
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+          Console.Write("Enter Height in cetimeter : ");
+          int height = Convert.ToInt32(Console.ReadLine());
+
+            
+
+            if (height < 135)
+            {
+                Console.WriteLine( "Person is Short ");
+                
+            }
+           else if (height>180)
+            {
+                Console.WriteLine("Person is tall ");
+
+            }
+            else if (height>135 && height<180)
+            {
+                Console.WriteLine("Person is of Average height");
+
+            }
+            
+
+        }
+    }
+}
+
+//Write a C# Sharp program to find the eligibility of admission for a professional course based on
+ the following criteria: 
+Marks in Maths >=65
+Marks in Phy >=55
+Marks in Chem>=50
+Total in all three subject >=180
+or
+Total in Math and Physics >=140
+
+
+namespace Interface
+{
+ 
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+          Console.Write("Enter Math Marks : ");
+          int math = Convert.ToInt32(Console.ReadLine());
+          Console.Write("Enter Physics Marks : ");
+          int phys = Convert.ToInt32(Console.ReadLine());
+          Console.Write("Enter Chemistry Marks : ");
+            int chemo = Convert.ToInt32(Console.ReadLine());
+            int total = (math + phys + chemo);
+            int total_p_M =total-chemo;
+
+            if (total>=180 || total_p_M>=140)
+            {
+                Console.WriteLine("The  candidate is eligible for admission.\n");
+                
+            }
+           else 
+            {
+                Console.WriteLine("The  candidate is NOT eligible for admission.\n");
+
+            }
+           
+            
+
+        }
+    }
+}
+
+//Write a C# program to check whether the triangle is Equilateral, Isosceles or 
+Scalene based on the input sides from the user.
+
+namespace Interface
+{
+ 
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+          Console.Write("Enter value of side 1 : ");
+          int x = Convert.ToInt32(Console.ReadLine());
+          Console.Write("Enter value of side 2 : ");
+          int y = Convert.ToInt32(Console.ReadLine());
+          Console.Write("Enter value of side 3 : ");
+            int z = Convert.ToInt32(Console.ReadLine());
+           
+
+            if (x==y && y==z && z==x)
+            {
+                Console.WriteLine("The Given Triangle is equilateral");
+                
+            }
+            else if (x == y || y == z || z == x)
+            {
+                Console.WriteLine("The Given Triangle is isosceles");
+
+            }
+            else
+                Console.WriteLine("The Given Triangle is Scalene");
+
+
+        }
+    }
+}
+
+//Write a program in C# Sharp to copy the elements one array into another array.
+
+namespace Interface
+{
+ 
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr1 = new int[100];
+            int[] arr2 = new int[100];
+            Console.Write("Enter number of element you want to put in array : ");
+          int n = Convert.ToInt32(Console.ReadLine());
+            int i;
+
+            for( i = 0; i < n; i++)
+            {
+                Console.Write("element - {0} : ", i);
+                arr1[i] = Convert.ToInt32(Console.ReadLine());
+               
+            }
+            Console.Write(" Array elements are : ");
+            for (i = 0; i < n; i++)
+            {
+                arr2[i] = arr1[i];
+               
+                Console.Write("{0} ", arr2[i]);
+
+            }
+
+          //  for (i = 0; i < n; i++)
+                Console.Write("\n");
+            Console.Write(" Array elements copy are : ");
+
+            for ( i = 0; i < n; i++)
+                Console.Write("{0}  ", arr2[i]);
+
+        }
+    }
+}
+
+
+
+//Write a program in C# Sharp to merge two arrays of same size sorted in ascending order.
+
+using System.Collections.Generic;
+
+namespace Interface
+{
+ 
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter number of element you want to put in array : ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[] arr1 = new int[n];
+            int[] arr2 = new int[n];
+           
+            int i;
+            Console.WriteLine("Enter array 1 element : ");
+            for ( i = 0; i < n; i++)
+            {
+                Console.Write("element array 1 - {0} : ", i);
+                arr1[i] = Convert.ToInt32(Console.ReadLine());
+
+            }
+            Console.WriteLine("Enter array 2 element : ");
+
+            for (i = 0; i < n; i++)
+            {
+                Console.Write("element array 2 - {0} : ", i);
+                arr2[i] = Convert.ToInt32(Console.ReadLine());
+
+            }
+
+            var myList = new List<int>();
+            myList.AddRange(arr1);
+            myList.AddRange(arr2);
+            int[] arr3 = myList.ToArray();
+            Console.WriteLine("Combined array elements in sorted form");
+            Array.Sort(arr3);
+            foreach (int res in arr3)
+            {
+                Console.Write(" "+res);
+            }
+
+
+        }
+    }
+}
+
+
+//Write a program in C# Sharp to separate odd and even integers in separate arrays.
+
+using System.Collections.Generic;
+
+namespace Interface
+{
+ 
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter number of element you want to put in array : ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[] arr = new int[n];
+            int[] even =new int[n];
+            int[] odd = new int[n];
+            int i,j=0,k=0;
+            Console.WriteLine("Enter array element : ");
+            for ( i = 0; i < n; i++)
+            {
+                Console.Write("element array 1 - {0} : ", i);
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+
+                if (arr[i] % 2 == 0)
+                {
+                    even[j] = arr[i];
+                    j++;
+                }
+                else
+
+                {
+                    odd[k] = arr[i];
+                    k++;
+                }
+            }
+
+         
+            Console.Write("\nThe Even elements are : \n");
+            for (i = 0; i < j; i++)
+            {
+                Console.Write("{0} ", even[i]);
+            }
+
+            Console.Write("\nThe Odd elements are :\n");
+            for (i = 0; i < k; i++)
+            {
+                Console.Write("{0} ", odd[i]);
+            }
+
+
+
+
+        }
+    }
+}
+
+//Write a program in C# Sharp to print individual characters of the string in reverse order.
+
+using System.Collections.Generic;
+
+namespace Interface
+{
+ 
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+           
+            Console.Write("Enter the word: ");
+            string str = Console.ReadLine();
+
+            int l = str.Length - 1;
+            Console.Write("Reverse word is : ");
+
+            for (int i=l; i>=0; i--)
+            {
+                Console.Write(str[i]);
+            }
+
+        }
+    }
+}
+
+
+//Write a program in C# Sharp to read a sentence and replace lowercase characters by uppercase and vice-versa.
+
+using System;
+public class exercise15
+{
+    public static void Main()
+    {
+        string str1;
+        char[] arr1;
+        int l, i;
+        l = 0;
+        char ch;
+       
+        Console.Write("Input the string : ");
+        str1 = Console.ReadLine();
+        l = str1.Length;
+        arr1 = str1.ToCharArray(0, l); // Converts string into char array.
+
+        Console.Write("\nAfter conversion, the string is : ");
+        for (i = 0; i < l; i++)
+        {
+            ch = arr1[i];
+            if (Char.IsLower(ch)) // check whether the character is lowercase
+                Console.Write(Char.ToUpper(ch)); // Converts lowercase character to uppercase.
+            else
+                Console.Write(Char.ToLower(ch)); // Converts uppercase character to lowercase.
+        }
+        Console.Write("\n\n");
+    }
+}
+
+//Write a C# Sharp program to find the length of the longest substring without repeating 
+characters from a given string.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ques_14
+{
+    internal class Program
+    {
+        public static int length_Of_Longest_Substring(String s)
+        {
+            int length = 0;
+            for (int start = 0; start < s.Length; start++)
+            {
+                int i = start;
+                var dictionary = new Dictionary<char, int>();
+
+                while (i < s.Length && !dictionary.ContainsKey(s[i]))
+                {
+                    dictionary.Add(s[i++], 1);
+                }
+                if (i - start > length)
+                {
+                    length = i - start;
+                }
+            }
+
+            return length;
+        }
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the string : ");
+            string str = Console.ReadLine();
+
+            int len = length_Of_Longest_Substring(str);
+
+            Console.WriteLine(len);
+        }
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
